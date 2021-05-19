@@ -1,0 +1,34 @@
+#include "Classes.h"
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+
+    menu Menu;
+    int Z = 1;
+    float a, b1;
+
+    
+
+    while (Z)
+    {
+        cout << "\n\n\nВыберите нужное действие:\n\n1.Возвести вещественное число в степень РЧ\n2.Сравнить 2 вещественных числа\n3.Сравнить вещественное число с целым\n\nЧто бы выйти из программы нажмите 0 \n\nВведите цифру нужного вам действия - " << endl;
+        
+        cin >> Z;
+        switch (Z)
+        {
+        case 1:Menu.stepen(); break;
+        case 2:Menu.bolshemenshe1(); break;
+        case 3:Menu.bolshemenshe2(); break;
+        case 0:return 999;
+        default:
+            cout << "вы должны ввести номер операции: 1 или 2 или 3 или 4" << endl;
+            return 3;
+        }
+        
+        system("Pause");
+        system("cls");
+
+
+    }
+}
